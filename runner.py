@@ -130,8 +130,9 @@ class InteractiveRunner:
         print("LOGOWANIE DO CDA PREMIUM")
         print("-" * 60)
         
-        # username = input("Podaj login do CDA Premium: ")
-        # password = getpass.getpass("Podaj hasło do CDA Premium: ")
+        if(not(self.login_CDA and self.password_CDA)):
+            self.login_CDA = input("Podaj login do CDA Premium: ")
+            self.password_CDA = getpass.getpass("Podaj hasło do CDA Premium: ")
         
         print("\nLogowanie...")
         
